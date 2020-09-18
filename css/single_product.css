@@ -1,0 +1,392 @@
+*{
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-bg: hsl(210,36%,96%);
+  --gray-text: hsl(210,22%,49%);
+  --brown : rgb(195, 96, 24);
+}
+
+body{
+margin: 0;
+padding: 0;
+background: #fff;
+}
+
+i{
+color:rgb(14, 17, 33);
+}
+
+.nav-item{
+padding: 17px 10px;
+}
+
+.nav-link{
+font-size: 1.3rem;
+letter-spacing: 2px;
+margin-right: 20px;
+color: var(--gray-text);
+}
+
+.nav-link:hover{
+color: var(--brown);
+}
+
+.navbar{
+background: black;
+background-color: rgba(0,0,0,0);
+}
+
+.navbar-toggler{
+background: var(--brown);
+border-radius: 10px;
+}
+
+.fa-bars{
+color: #fff;
+}
+
+
+
+
+/* Description Section */
+#description{
+background: var(--gray-bg);
+height: 20vh;
+}
+
+
+
+/* Product Section */
+#product{
+margin-top: 60px;
+color:var(--gray-text);
+}
+
+#product .productPrice{
+font-weight: bold;
+font-size: 1.2rem;
+}
+
+#product img{
+border-radius: 5px;
+}
+
+#product .productColors{
+display: flex;
+}
+
+#product .firstColor, .secondColor{
+width: 20px;
+height: 20px;
+margin-right: 10px;
+border-radius: 50%;
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+#product .addToCart{
+  background-color: var(--brown);
+  color: #fff;
+  border-radius: 5px;
+  border: 0px;
+  padding: 5px 20px;
+}
+
+#product .addToCart:hover{
+  opacity: 0.8;
+  color:black;
+}
+
+
+#logoCart:hover{
+cursor: pointer;
+}
+
+.cartCircle{
+  height: 25px;
+  width: 25px;
+  background: var(--brown);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  bottom: 44px;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Shopping Cart Modal */
+#darkModal{
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+  right: 10%;
+  z-index: 3;
+  margin:0;
+  padding: 0;
+}
+
+#sidebar{
+background: rgb(234, 243, 250);
+position: fixed;
+left: 75%;
+width: 25vw;
+height: 100vh;
+z-index: 2;
+font-family: 'Kaushan Script', cursive;
+font-weight: bold;
+margin:0;
+padding: 0;
+}
+
+.closeSidebar i{
+font-weight: bold;
+cursor:pointer;
+color: rgb(52, 68, 79);
+margin-left: 5%;
+margin-top: 2%;
+}
+
+.bottom{
+position: relative;
+top: 760px;
+}
+
+#checkout{
+position: relative;
+left: 108px;
+background-color: var(--brown);
+color: #fff;
+border-radius: 5px;
+border: 0px;
+padding: 5px 90px;
+}
+
+#checkout:hover{
+  opacity: 0.8;
+  color:black;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+  #logoImg{
+  position: relative;
+  right: 5%;
+  bottom:1%;
+  }
+
+  #logoCart{
+  position: relative;
+  right: 15%;
+  top: 15px;
+  z-index: 1;
+  }
+
+  .descriptionText{
+  padding-top: 12%;
+  color: var(--gray-text);
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    right: 1%;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 30%;
+  width: 75vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .closeSidebar i{
+  font-weight: bold;
+  cursor:pointer;
+  color: rgb(52, 68, 79);
+  margin-left: 5%;
+  margin-top: 2%;
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  right: 5%;
+  }
+
+  .bottom #checkout{
+   position: relative;
+   left: 20%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .descriptionText{
+  padding-top: 10%;
+  color: var(--gray-text);
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    right: 1%;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 37%;
+  width: 70vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  left: 2%;
+  }
+
+  .bottom .total{
+    position: relative;
+    right: 7%;
+  }
+}
+
+
+@media (min-width: 992px) {
+  #logoImg{
+  position: absolute;
+  left: 50%;
+  top:1%;
+  }
+
+  #logoCart{
+  position: absolute;
+  left: 85%;
+  top: 25%;
+  z-index: 1;
+  }
+
+  .descriptionText{
+  padding-top: 6.5%;
+  color: var(--gray-text);
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  left: 2%;
+  }
+
+  .bottom .total{
+    position: relative;
+    right: 7%;
+  }
+
+   .bottom #checkout{
+    position: relative;
+    left: 25%;
+   }
+
+}
+
+
+@media (min-width: 1200px) {
+
+  /* Images */
+  .img-fluid{
+        width:  100%;
+        height: 380px;
+        object-fit: cover;
+
+  }
+
+  #logoImg{
+  position: absolute;
+  left: 50%;
+  top:1%;
+  }
+
+  #logoCart{
+  position: absolute;
+  left: 80%;
+  top: 25%;
+  z-index: 1;
+  }
+
+  .descriptionText{
+  padding-top: 7%;
+  color: var(--gray-text);
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 75%;
+  width: 25vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .closeSidebar i{
+  font-weight: bold;
+  cursor:pointer;
+  color: rgb(52, 68, 79);
+  margin-left: 5%;
+  margin-top: 2%;
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  right: 5%;
+  }
+
+  .bottom .total{
+    position: relative;
+    left: 2%;
+  }
+}

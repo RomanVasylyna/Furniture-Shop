@@ -1,0 +1,593 @@
+:root {
+  --brown: rgb(195, 96, 24);
+}
+
+body{
+margin: 0;
+padding: 0;
+background: rgb(223, 223, 223);
+}
+
+#header{
+min-height: 1000px;
+background-image: url('../img//gift.jpeg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top 60% left 50%;
+}
+
+#dark-overlay{
+  /* background: rgb(0, 0, 0); opacity: 0.5;*/
+background-color: rgba(0,0,0,0.5);
+min-height: 1000px;
+
+}
+
+.navbar{
+background: black;
+background-color: rgba(0,0,0,0);
+}
+
+#logoCart:hover{
+cursor: pointer;
+}
+
+.nav-link{
+font-size: 1.3rem;
+letter-spacing: 2px;
+margin-right: 20px;
+color: #fff;
+}
+
+.nav-link:hover{
+color: var(--brown);
+}
+
+.navbar-toggler{
+background: var(--brown);
+border-radius: 10px;
+}
+
+.fa-bars{
+color: #fff;
+padding-bottom: 5px;
+}
+
+
+.relax h1{
+font-family: 'Kaushan Script', cursive;
+font-weight: 700;
+}
+
+.relax p{
+font-size: 2.5rem;
+}
+
+.relax button{
+border:1px solid #fff;
+border-radius: 3px;
+color: #fff;
+}
+
+.relax button:hover{
+color: var(--brown);
+background: #fff;
+}
+
+.cartCircle{
+height: 25px;
+width: 25px;
+background: var(--brown);
+color: #fff;
+border-radius: 50%;
+text-align: center;
+position: relative;
+bottom: 44px;
+left: 20px;
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+h1{
+font-weight: bold;
+font-size: 2.5rem;
+letter-spacing: 2px;
+}
+
+.slash{
+color: var(--brown);
+}
+
+.img-fluid{
+height: 230px;
+width: 348px;
+border-radius: 6px;
+margin: 0;
+padding: 0;
+}
+
+.description{
+font-size: 1.1rem;
+}
+
+.price{
+font-weight: bold;
+font-size: 1.2rem;
+margin-top: -20px;
+}
+
+#allProducts{
+background-color: var(--brown);
+color: #fff;
+border-radius: 5px;
+border: 0px;
+padding: 5px 20px;
+}
+
+#allProducts:hover{
+opacity: 0.8;
+color:black;
+}
+
+/* Circle divs with font-awesome icons */
+.brownCircle{
+border-radius: 50%;
+background: var(--brown);
+height: 35px;
+width: 35px;
+text-align: center;
+margin-right: 15px;
+}
+
+.brownCircle:hover{
+cursor: pointer;
+}
+
+
+
+
+i{
+color: #fff;
+margin-top: 7.5px;
+}
+
+.sidebar{
+min-height: 1450px;
+background: rgb(238, 252, 255);
+width: 450px;
+position: fixed;
+left: 1478px;
+color: black;
+overflow-y: scroll;
+}
+
+#darkModal{
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 2000px;
+  right: 50px;
+  z-index: 3;
+  margin:0;
+  padding: 0;
+}
+
+#sidebar{
+background: rgb(234, 243, 250);
+position: fixed;
+left: 1400px;
+top: 0px;
+width: 450px;
+height: 1000px;
+z-index: 2;
+font-family: 'Kaushan Script', cursive;
+font-weight: bold;
+margin:0;
+padding: 0;
+}
+
+
+.closeSidebar i{
+font-weight: bold;
+cursor:pointer;
+color: rgb(52, 68, 79);
+margin-left: 13px;
+}
+
+.bottom{
+position: relative;
+top: 760px;
+}
+
+#checkout{
+position: relative;
+left: 108px;
+background-color: var(--brown);
+color: #fff;
+border-radius: 5px;
+border: 0px;
+padding: 5px 90px;
+}
+
+#checkout:hover{
+  opacity: 0.8;
+  color:black;
+}
+
+
+/* Media Queries */
+@media (min-width: 576px) {
+
+  #logoImg{
+  position: relative;
+  right: 3%;
+  }
+
+  #logoCart{
+  position: relative;
+  top: 12px;
+  right: 5%;
+  z-index: 1;
+  }
+
+  .relax{
+  position: absolute;
+  left: 7%;
+  top: 40%;
+  }
+
+  .relax h1{
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  }
+
+  .relax p{
+  font-size: 1.5rem;
+  }
+
+  .circleRow{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 34%;
+  left: 41%;
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    right: 1%;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 30%;
+  width: 75vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .closeSidebar i{
+  font-weight: bold;
+  cursor:pointer;
+  color: rgb(52, 68, 79);
+  margin-left: 5%;
+  margin-top: 2%;
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  right: 5%;
+  }
+
+
+
+}
+
+@media (min-width: 768px) {
+
+  .relax h1{
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 700;
+  font-size: 3.5rem;
+  }
+
+  .relax p{
+  font-size: 1.5rem;
+  }
+
+  .circleRow{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 34%;
+  left: 43%;
+  }
+
+
+  .descriptionText{
+  padding-top: 10%;
+  color: var(--gray-text);
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    right: 1%;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 37%;
+  width: 70vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  left: 2%;
+  }
+
+  .bottom .total{
+    position: relative;
+    right: 7%;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  #logoImg{
+  position: relative;
+  left: 60%;
+  }
+
+  #logoCart{
+  position: relative;
+  top: 12px;
+  left: 70%;
+  z-index: 1;
+  }
+
+  .relax{
+  position: absolute;
+  left: 7%;
+  top: 40%;
+  }
+
+  .relax h1{
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 700;
+  font-size: 3.9rem;
+  }
+
+  .relax p{
+  font-size: 2rem;
+  }
+
+  .circleRow{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 34%;
+  left: 35%;
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    right: 1%;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 30%;
+  width: 75vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .closeSidebar i{
+  font-weight: bold;
+  cursor:pointer;
+  color: rgb(52, 68, 79);
+  margin-left: 5%;
+  margin-top: 2%;
+  }
+
+  .bottom{
+  position: relative;
+  top: 72%;
+  right: 5%;
+  }
+
+  .bottom #checkout{
+    position: relative;
+    left: 25%;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+
+  #logoImg{
+  position: absolute;
+  left: 47%;
+  }
+
+  #logoCart{
+  position: relative;
+  left: 90%;
+  top: 17px;
+  z-index: 1;
+  }
+
+  .relax{
+  position: absolute;
+  left: 20%;
+  top: 35%;
+  }
+
+  .circleRow{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100px;
+  left: 140px;
+  }
+
+  .relax h1{
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 700;
+  font-size: 4.2rem;
+  }
+
+  .relax p{
+  font-size: 2.5rem;
+  }
+
+  /* Shopping Cart Modal */
+  #darkModal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    margin:0;
+    padding: 0;
+  }
+
+  #sidebar{
+  background: rgb(234, 243, 250);
+  position: fixed;
+  left: 75%;
+  width: 25vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  }
+
+  .closeSidebar i{
+  font-weight: bold;
+  cursor:pointer;
+  color: rgb(52, 68, 79);
+  margin-left: 5%;
+  margin-top: 2%;
+  }
+
+  .bottom{
+  position: absolute;
+  top: 80%;
+  }
+
+  .bottom .total{
+   position: relative;
+   left: 2.5%;
+  }
+
+}
+
+
+/*
+@media (min-width: 1200px) {
+
+}
+*/
+
+/*
+@media (min-width: 576px) {
+
+  .circleRow{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100px;
+  left: 225px;
+  }
+
+  .navbar-toggler{
+  background: var(--brown);
+  border-radius: 30px;
+  }
+
+  .navbar-toggler-icon{
+  color: #fff;
+  }
+
+  .relax{
+    position: absolute;
+    left: 40px;
+    top: 350px;
+  }
+
+  .relax h1{
+   font-size: 2.4rem;
+  }
+
+  .relax p{
+   font-size: 1.5rem;
+  }
+
+  #logoImg{
+  position: absolute;
+  left: 220px;
+  top: 10px;
+  }
+
+  #logoCart{
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  }
+
+  nav{
+  position: absolute;
+  top: 20px;
+  z-index: 8;
+  }
+
+
+
+}
+*/
