@@ -27,7 +27,8 @@ $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
   //Add One Item to Cart
   $.each(productsArr(), (i, e) => {
   if(e.img == image) {
-  localArr.push(e);
+  localArr.push(e); //Add Object to Local Storage
+  //Add element to Cart
   display += `
   <div class="d-flex flex-row pt-5 pl-4" id="appendItem">
   <img src="${e.img}" alt="" class="img-fluid mr-3 ml-3" style="width:15%; height: 50px;object-fit: cover;"/>
@@ -47,16 +48,18 @@ $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
   }
   })
 
-
-  //Add elem to Local Storage
+  //Add Object to Local Storage + Check For No Repeats
   localStorage.setItem('Cart', JSON.stringify(localArr));
   removeObjRepeat();
 
-
+  //Forbid Adding New Elements if there is one in cart
+  checkExistence();
 
   //Add Content
   $('.cartCircle').text(++counter);
   $('#cartItem').append(display);
+
+
 
   //Div with item is already created here
   console.log($('#appendItem').find('img').attr('src'));
@@ -78,14 +81,18 @@ $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
   $('#darkModal').removeClass('d-none');
 })
 
-console.log(checkExistence());
+//console.log(checkExistence());
 
 
-//Check
+//Check for repeats
 function checkExistence() {
 let arr = JSON.parse(localStorage.getItem('Cart'));
 let item = $('#appendItem').find('img').attr('src');
-return arr;
+arr.forEach((e) => {
+if(item == e.img) {
+$('.quantitySpan').text(2);
+}
+})
 }
 
 
