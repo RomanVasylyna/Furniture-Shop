@@ -1,6 +1,7 @@
 $(document).ready(() => {
 
 let counter = 0;
+let counter2 = 0;
 let localArr = [];
 
 
@@ -23,7 +24,6 @@ $('#darkModal').removeClass('d-none');
 $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
   let image = e.target.closest('.displayNone').firstElementChild.getAttribute('src');
   let display = '';
-
   //Add One Item to Cart
   $.each(productsArr(), (i, e) => {
   if(e.img == image) {
@@ -39,7 +39,7 @@ $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
   </div>
   <div class="d-flex flex-column" style="position:absolute;left:80%;">
   <a href="#" style="text-decoration:none;color:rgb(195, 96, 24);" class="arrowUp">&#129129;</a>
-  <span class="quantitySpan">1</span>
+  <span class="quantitySpan">${++e.amount}</span>
   <a href="#" style="text-decoration:none;color:rgb(195, 96, 24);" style="position:absolute;left:80%;" class="arrowDown">&#129131;</a>
   </div>
   </div>
@@ -53,12 +53,11 @@ $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
   removeObjRepeat();
 
   //Forbid Adding New Elements if there is one in cart
-  checkExistence();
+  checkExistence(display);
 
   //Add Content
   $('.cartCircle').text(++counter);
   $('#cartItem').append(display);
-
 
 
   //Div with item is already created here
@@ -85,12 +84,15 @@ $('.brownCircle .fa-shopping-cart, .addToCart').on('click', (e) => {
 
 
 //Check for repeats
-function checkExistence() {
+function checkExistence(display) {
 let arr = JSON.parse(localStorage.getItem('Cart'));
-let item = $('#appendItem').find('img').attr('src');
+let item = $(`#appendItem`).find('img').attr('src');
 arr.forEach((e) => {
 if(item == e.img) {
-$('.quantitySpan').text(2);
+e.amount++;
+$(`#appendItem`).empty();
+} else {
+$(`#appendItem`).text(1);
 }
 })
 }
@@ -300,7 +302,8 @@ let arr = [
     img : 'img/one.jpeg',
     firstColor : 'rgb(195, 96, 24)',
     secondColor : 'black',
-    price : '$9.99'
+    price : '$9.99',
+    amount : 0
   },
 
   {
@@ -309,7 +312,8 @@ let arr = [
     img : 'img/two.jpeg',
     firstColor : 'rgb(43, 251, 20)',
     secondColor : 'rgb(0, 23, 255)',
-    price : '$39.95'
+    price : '$39.95',
+    amount : 0
   },
 
   {
@@ -318,7 +322,8 @@ let arr = [
     img : 'img/three.jpeg',
     firstColor : 'red',
     secondColor : 'green',
-    price : '$29.98'
+    price : '$29.98',
+    amount : 0
   },
 
   {
@@ -327,7 +332,8 @@ let arr = [
     img : 'img/four.jpeg',
     firstColor : 'brown',
     secondColor : 'black',
-    price : '$79.99'
+    price : '$79.99',
+    amount : 0
   },
 
   {
@@ -337,7 +343,8 @@ let arr = [
     firstColor : 'brown',
     secondColor : 'blue',
     thirdColor : 'orange',
-    price : '$25.99'
+    price : '$25.99',
+    amount : 0
   },
 
   {
@@ -346,7 +353,8 @@ let arr = [
     img : 'img/six.jpeg',
     firstColor : 'red',
     secondColor : 'blue',
-    price : '$45.99'
+    price : '$45.99',
+    amount : 0
   },
 
   {
@@ -355,7 +363,8 @@ let arr = [
     img : 'img/seven.jpeg',
     firstColor : 'red',
     secondColor : 'orange',
-    price : '$6.99'
+    price : '$6.99',
+    amount : 0
   },
 
   {
@@ -363,7 +372,8 @@ let arr = [
     produced : 'By Liddy',
     img : 'img/eight.jpeg',
     firstColor : 'blue',
-    price : '$69.99'
+    price : '$69.99',
+    amount : 0
   },
 
   {
@@ -373,7 +383,8 @@ let arr = [
     firstColor : 'green',
     secondColor : 'orange',
     thirdColor : 'red',
-    price : '$8.99'
+    price : '$8.99',
+    amount : 0
   },
 
   {
@@ -381,7 +392,8 @@ let arr = [
     produced : 'By Liddy',
     img : 'img/ten.jpeg',
     firstColor : 'orange',
-    price : '$21.99'
+    price : '$21.99',
+    amount : 0
   },
 
   {
@@ -390,7 +402,8 @@ let arr = [
     img : 'img/eleven.jpeg',
     firstColor : 'green',
     secondColor : 'red',
-    price : '$10.99'
+    price : '$10.99',
+    amount : 0
   },
 
   {
@@ -398,7 +411,8 @@ let arr = [
     produced : 'By Liddy',
     img : 'img/twelve.jpeg',
     firstColor : 'black',
-    price : '$9.99'
+    price : '$9.99',
+    amount : 0
   },
 
 
